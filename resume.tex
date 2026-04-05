@@ -1,0 +1,201 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Ishaan Kesarwani
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{fontawesome5} 
+
+
+\geometry{
+  top=0.5in,
+  bottom=0.5in,
+  left=0.6in,
+  right=0.6in
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \textit{\small $|$ #3} & #2 \textit{\small #4}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-9pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge \scshape Ishaan Kesarwani} \\ \vspace{4pt}
+    \small +917303218996 $|$
+    \href{mailto:kesarwaniishaan4@gmail.com}{\underline{kesarwaniishaan4@gmail.com}} $|$
+    Indian Institute of Technology, Roorkee $|$ 2028 Batch $|$
+    \href{https://github.com/IshaanXCoder}{\faGithub\ IshaanXCoder}
+\end{center}
+
+%---------- EDUCATION ----------
+\section{Education}
+\begin{tabularx}{\textwidth}{@{} p{3.4cm} @{\hspace{1.2cm}} X @{\hspace{0.5cm}} p{1.5cm} r @{}}
+  \toprule
+  \textbf{Examination} & \textbf{Institute} & \textbf{Year} & \textbf{CPI / \%} \\
+  \midrule
+  UG                  & Indian Institute of Technology, Roorkee     & 2028 & 7.7  \\[2pt]
+  CBSE Intermediate   & Bharti Vidya Niketan, Delhi                 & 2024 & 95   \\[2pt]
+  CBSE Matriculate    & Manav Rachna International School, Gurgaon  & 2022 & 95.2 \\
+  \bottomrule
+\end{tabularx}
+
+%---------- KEY SKILLS ----------
+\section{Key Skilled Areas}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Ethereum VM and Solana VM, Fundamentals of ZK Systems, Circuits,  DeFi, System Design, Algorithms, DBMS, Agentic, RAGs, MERN, Languages (C++, Python, Rust, Golang)
+  }}
+\end{itemize}
+
+%---------- PROJECTS ----------
+\section{Key Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Orbital} $|$ \emph{Rust(Stylus), DeFi, AMM} $|$ \href{https://github.com/agrawalx/orbital-pool}{\underline{Github}}}{} 
+    \resumeItemListStart
+      \resumeItem{Built \textbf{Orbital}, A multi-dimensional concentrated liquidity AMM for thousands of stablecoins in a single LP. An implementation of $|$ \href{https://www.paradigm.xyz/2025/06/orbital}{\underline{Paradigm's whitepaper}}, all written in Stylus(Rust-based framework of Arbitrum).}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Grothy-crab} $|$ \emph{Rust, ZK-SNARKs, Groth16} $|$ \href{https://github.com/ishaanxcoder/grothy-crab}{\underline{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Implemented Groth16 zkSNARK in Rust from scratch, following the algorithm end-to-end: from R1CS constraints, QAP construction and trusted setup through to proof generation and verification.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Nymph} $|$ \emph{ZK Proofs in Noir, Flutter, MoPro} $|$ \href{http://github.com/IshaanXCoder/nymph}{\underline{Github}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a cross-platform privacy app inspired by StealthNote.xyz, with ZK proofs and circuits in Noir running on a Flutter app using MoPro. A project under BlocSoc IITR, initially built at EthGlobal Delhi.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Deimos} $|$ \emph{Rust, Flutter, Circom, Noir, Risc0} $|$ \href{https://github.com/BlocSoc-iitr/Deimos/}{\underline{Github}}}{}
+    \resumeItemListStart
+      \resumeItem{An open-source benchmarking platfrm for computing zero-knowledge proofs in frameworks like Groth16, Rapidsnark, Risc0, Imp1, Cario-m, Plonk etc. on mobile devices. Project under BlocSoc IITR.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{DragNDrop} $|$ \emph{AI Agents Workflow, React} $|$ \href{https://github.com/IshaanXCoder/dragndrop-agents}{\underline{Github}} }{}
+    \resumeItemListStart
+      \resumeItem{Developed an n8n-style AI workflow engine for building AI agents.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{WebBuidler} $|$ \emph{AI, GitHub, Full-Stack} $|$ \href{https://github.com/IshaanXCoder/WebBuidler}{\underline{Link}}}{}
+    \resumeItemListStart
+      \resumeItem{AI-powered tool that creates a fully functional website from a prompt, generates a customized multi-directory site and automatically deploys it to GitHub. Supports iterative changes via prompting.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%---------- EXPERIENCE ----------
+\section{Experiences}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {\href{https://x.com/blocsociitr}{BlocSoc IITR}}{2024 - Present}
+  {Developer}{}
+
+\vspace{3pt}
+\resumeSubheading
+  {\href{https://x.com/solanaturbine}{Turbin3 Solana Builder}}{}
+  {Graduate}{2025 Q3}
+
+\vspace{3pt}
+\resumeSubheading
+  {Cinema Section, IITR}{2024 - Present}
+  {Member}{}
+
+\vspace{3pt}
+\resumeSubheading
+  {BlockBuidlers}{Web3 Start-up}
+  {Web Developer, Intern}{}
+
+\resumeSubHeadingListEnd
+
+\vspace{4pt}
+\noindent\small\textbf{Open Source:} Actively contributing to projects like \href{https://github.com/intelowlproject/IntelOwl/}{\textbf{Intelowl}}, \href{https://github.com/BlocSoc-iitr/Deimos/}{\textbf{Deimos}}, \href{https://github.com/unicode-org/icu4x/}{\textbf{ICU4X}} and \href{https://github.com/kyverno/kyverno/}{\textbf{kyverno}} across Rust, Golang and Python.
+%---------- ACHIEVEMENTS ----------
+\section{Achievements, Positions \& Responsibilities}
+\begin{itemize}[leftmargin=0.2in, itemsep=1pt, parsep=0pt]
+  \small{
+    \item One of 100 students across all IITs, NITs and IIMs selected for the \textbf{OPJEMS Scholarship}.
+    \item \textbf{1st place} at Arbitrum Hacker House, Bangalore, \textbf{2nd place} at Arbitrum Open House (implemented \href{https://www.paradigm.xyz/2025/06/orbital}{\underline{Orbital}})
+    \item \textbf{3rd place} in Syntax Error'24, IITR, \textbf{1st place} Shaastra'21 IITM, \textbf{1st place} in CrackHack'25, IIT Mandi, \textbf{2nd place} at IIT Dhanbad BFX'21, \textbf{3rd place} in Monad Blitz Lucknow.
+    \item \textbf{All India Rank 6173} in JEE Advanced, \textbf{99.72 percentile} in JEE Mains) \textbf{100} in Mathematics and Physics.
+    \item Cleared \textbf{Pre-Regional Mathematics Olympiad (PRMO)} in 2021.
+    \item Served as \textbf{Head Boy} and twice as \textbf{House Captain} in school.
+  }
+\end{itemize}
+
+%---------- EXTRACURRICULAR ----------
+\section{Extracurricular Activities}
+\begin{itemize}[leftmargin=0.2in, itemsep=1pt, parsep=0pt]
+  \small{
+    \item State-level table tennis player.
+    \item Won a district-level bronze medal in table tennis.
+    \item Photography, Videography and Video Editing.
+  }
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
