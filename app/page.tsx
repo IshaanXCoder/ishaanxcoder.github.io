@@ -40,12 +40,12 @@ export default function Home() {
             About
           </h2>
           <p className="section__body">
-            I build at the intersection of blockchains, zero-knowledge proofs and usable products.
+            I build around blockchain, zk proofs and applied AI.
             I&apos;m a developer at{" "}
             <a href="https://x.com/blocsoc-iitr" target="_blank" rel="noopener noreferrer">
               BlocSoc IITR
             </a>
-            , contribute to open source projects like{" "}
+            and actively contribute to open source projects like{" "}
             <a href="https://github.com/intelowlproject/IntelOwl" target="_blank" rel="noopener noreferrer">
               IntelOwl
             </a>
@@ -61,7 +61,7 @@ export default function Home() {
             <a href="https://github.com/kyverno/kyverno" target="_blank" rel="noopener noreferrer">
               Kyverno
             </a>{" "}
-            and care about clear system design and solid products.
+            and care about building solid products.
           </p>
         </section>
 
