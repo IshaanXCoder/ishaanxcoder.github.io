@@ -382,11 +382,6 @@ export default function Home() {
           </ul>
         </section>
 
-        <footer className="footer">
-          <p>
-            <a href="mailto:kesarwaniishaan4@gmail.com">kesarwaniishaan4@gmail.com</a>
-          </p>
-        </footer>
       </main>
 
       <Dock />
