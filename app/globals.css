@@ -365,6 +365,19 @@ a.timeline__name:hover {
   border-radius: 9999px;
 }
 
+.achievements {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.achievements li strong {
+  color: var(--text);
+}
+
 /* Projects */
 .projects__eyebrow {
   display: block;

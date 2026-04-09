@@ -382,6 +382,36 @@ export default function Home() {
           </ul>
         </section>
 
+        <section className="section" id="achievements" aria-labelledby="achievements-heading">
+          <h2 id="achievements-heading" className="section__title">
+            Achievements
+          </h2>
+          <ul className="achievements" role="list">
+            <li>
+              One of 100 students across all IITs, NITs and IIMs selected for the <strong>OPJEMS Scholarship</strong>.
+            </li>
+            <li>
+              <strong>1st place</strong> at Arbitrum Hacker House, Bangalore, and <strong>2nd place</strong> at Arbitrum
+              Open House (implemented Orbital).
+            </li>
+            <li>
+              <strong>3rd place</strong> in Syntax Error&apos;24 (IITR), <strong>1st place</strong> in Shaastra&apos;21
+              (IITM), <strong>1st place</strong> in CrackHack&apos;25 (IIT Mandi), <strong>2nd place</strong> at IIT
+              Dhanbad BFX&apos;21, and <strong>3rd place</strong> in Monad Blitz Lucknow.
+            </li>
+            <li>
+              <strong>All India Rank 6173</strong> in JEE Advanced, <strong>99.72 percentile</strong> in JEE Mains, and
+              scored <strong>100</strong> in Mathematics and Physics.
+            </li>
+            <li>
+              Cleared <strong>Pre-Regional Mathematics Olympiad (PRMO)</strong> in 2021.
+            </li>
+            <li>
+              Served as <strong>Head Boy</strong> and twice as <strong>House Captain</strong> in school.
+            </li>
+          </ul>
+        </section>
+
       </main>
 
       <Dock />
