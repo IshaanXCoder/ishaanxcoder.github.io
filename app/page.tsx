@@ -1,6 +1,7 @@
 import Dock from "@/components/Dock";
 import GitHubIcon from "@/components/GitHubIcon";
 import TopBar from "@/components/TopBar";
+import AchievementsSection from "@/components/AchievementsSection";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
           <div className="hero__text">
             <h1 className="hero__title">Hi, I&apos;m Ishaan</h1>
             <p className="hero__subtitle">
-              Web3 &amp; systems - ZK, DeFi and fullstack. IIT Roorkee.
+              Web3 &amp; AI systems - ZK, DeFi and fullstack. IIT Roorkee.
             </p>
             <p className="hero__badge" role="status">
               <span className="hero__badge-dot" aria-hidden />
@@ -40,7 +41,7 @@ export default function Home() {
             About
           </h2>
           <p className="section__body">
-            I build around blockchain, zk proofs and applied AI.
+            I build around blockchain, zk proofs and AI.
             I&apos;m a developer at{" "}
             <a href="https://x.com/blocsoc-iitr" target="_blank" rel="noopener noreferrer">
               BlocSoc IITR
@@ -99,17 +100,16 @@ export default function Home() {
           <ul className="skills" role="list">
             {[
               "Rust",
-              "C++",
-              "Python",
-              "Golang",
-              "Solidity / EVM",
-              "Solana",
+              "Solidity/EVM fundamentals",
+              "Solana VM",
               "ZK(SNARKs, STARKs, VMs)",
               "DeFi",
               "System design",
-              "Algorithms",
-              "Agents & RAG",
-              "MERN",
+              "Agents, e2e RAG pipelines, Scaling Vector DBs",
+              "Devops",
+              "Python",
+              "Golang",
+              "C++",
             ].map((s) => (
               <li key={s}>{s}</li>
             ))}
@@ -382,35 +382,7 @@ export default function Home() {
           </ul>
         </section>
 
-        <section className="section" id="achievements" aria-labelledby="achievements-heading">
-          <h2 id="achievements-heading" className="section__title">
-            Achievements
-          </h2>
-          <ul className="achievements" role="list">
-            <li>
-              One of 100 students across all IITs, NITs and IIMs selected for the <strong>OPJEMS Scholarship</strong>.
-            </li>
-            <li>
-              <strong>1st place</strong> at Arbitrum Hacker House, Bangalore, and <strong>2nd place</strong> at Arbitrum
-              Open House (implemented Orbital).
-            </li>
-            <li>
-              <strong>3rd place</strong> in Syntax Error&apos;24 (IITR), <strong>1st place</strong> in Shaastra&apos;21
-              (IITM), <strong>1st place</strong> in CrackHack&apos;25 (IIT Mandi), <strong>2nd place</strong> at IIT
-              Dhanbad BFX&apos;21, and <strong>3rd place</strong> in Monad Blitz Lucknow.
-            </li>
-            <li>
-              <strong>All India Rank 6173</strong> in JEE Advanced, <strong>99.72 percentile</strong> in JEE Mains, and
-              scored <strong>100</strong> in Mathematics and Physics.
-            </li>
-            <li>
-              Cleared <strong>Pre-Regional Mathematics Olympiad (PRMO)</strong> in 2021.
-            </li>
-            <li>
-              Served as <strong>Head Boy</strong> and twice as <strong>House Captain</strong> in school.
-            </li>
-          </ul>
-        </section>
+        <AchievementsSection />
 
       </main>
 

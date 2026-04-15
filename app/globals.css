@@ -378,6 +378,144 @@ a.timeline__name:hover {
   color: var(--text);
 }
 
+.achievements__link {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+.achievements__link:hover {
+  color: var(--link-hover);
+}
+
+.achievements__linkBtn {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.achievements__gallery {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .achievements__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.achievements__card {
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: var(--bg);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.achievements__card:hover {
+  transform: translateY(-2px);
+  border-color: var(--muted);
+}
+
+.achievements__card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.achievements__card span {
+  display: block;
+  padding: 0.65rem 0.8rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.achievements__cardBtn {
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.achievements__lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.achievements__lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.achievements__lightboxContent {
+  position: relative;
+  width: min(100%, 62rem);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  transform: translateY(12px) scale(0.985);
+  transition: transform 0.28s ease;
+}
+
+.achievements__lightbox.is-open .achievements__lightboxContent {
+  transform: translateY(0) scale(1);
+}
+
+.achievements__lightboxContent img {
+  width: 100%;
+  max-height: min(72vh, 44rem);
+  object-fit: contain;
+  display: block;
+  background: #000;
+}
+
+.achievements__lightboxContent p {
+  margin: 0;
+  padding: 0.7rem 0.9rem 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.achievements__lightboxClose {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--dock-bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .achievements__lightboxClose {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
 /* Projects */
 .projects__eyebrow {
   display: block;
