@@ -312,6 +312,23 @@ export default function Home() {
           <ul className="timeline" role="list">
             <li className="timeline__row">
               <div className="timeline__logo timeline__logo--img">
+                <img src="/images/welaunch.png" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <a className="timeline__name" href="https://welaunch.ai" target="_blank" rel="noopener noreferrer">
+                    WeLaunch.AI
+                  </a>
+                  <span className="timeline__date">2026</span>
+                </div>
+                <p className="timeline__role">AI Engineer, Intern</p>
+                <p className="timeline__role">
+                  Automated the sales team&apos;s workflow on Slack by designing and deploying a multi-agent system.
+                </p>
+              </div>
+            </li>
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img">
                 <img src="/images/blocsoc.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
               </div>
               <div className="timeline__main">
@@ -327,6 +344,10 @@ export default function Home() {
                   <span className="timeline__date">2024 — Present</span>
                 </div>
                 <p className="timeline__role">Developer</p>
+                <p className="timeline__role">
+                  Web3 and agentic developer, contributing to multiple projects and have won multiple international
+                  hackathons.
+                </p>
               </div>
             </li>
             <li className="timeline__row">
