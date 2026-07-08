@@ -2,6 +2,7 @@ import Dock from "@/components/Dock";
 import GitHubIcon from "@/components/GitHubIcon";
 import TopBar from "@/components/TopBar";
 import AchievementsSection from "@/components/AchievementsSection";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -23,6 +24,14 @@ export default function Home() {
               <span className="hero__badge-dot" aria-hidden />
               Open to internships &amp; collaborations
             </p>
+            <Link
+              className="btn btn--ghost"
+              href="/contributions"
+              style={{ marginTop: "0.5rem" }}
+            >
+              <GitHubIcon className="btn__icon" />
+              View Contributions
+            </Link>
           </div>
           <div className="hero__avatar">
             <img
@@ -98,19 +107,21 @@ export default function Home() {
             Skills
           </h2>
           <ul className="skills" role="list">
-            {[
-              "Rust",
-              "Solidity/EVM fundamentals",
-              "Solana VM",
-              "ZK(SNARKs, STARKs, VMs)",
-              "DeFi",
-              "System design",
-              "Agents, e2e RAG pipelines, Scaling Vector DBs",
-              "Devops",
-              "Python",
-              "Golang",
-              "C++",
-            ].map((s) => (
+              {[
+                "Rust",
+                "Solidity/EVM fundamentals",
+                "Solana VM",
+                "ZK(SNARKs, STARKs, VMs)",
+                "DeFi",
+                "System design",
+                "Scaling Agents",
+                "RAG pipelines",
+                "AI Infra and Vectors DBs",
+                "Devops",
+                "Python",
+                "Golang",
+                "C++",
+              ].map((s) => (
               <li key={s}>{s}</li>
             ))}
           </ul>
