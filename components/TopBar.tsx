@@ -18,7 +18,7 @@ export default function TopBar() {
         </svg>
         kesarwaniishaan4@gmail.com
       </a>
-      <a className="top-bar__link" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+      <a className="top-bar__link" href="/resume_ishaan_kesarwani.pdf" target="_blank" rel="noopener noreferrer">
         <svg
           className="top-bar__icon"
           viewBox="0 0 24 24"

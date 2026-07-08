@@ -17,7 +17,7 @@ export default function Home() {
           <div className="hero__text">
             <h1 className="hero__title">Hi, I&apos;m Ishaan</h1>
             <p className="hero__subtitle">
-              Web3 &amp; AI systems - ZK, DeFi and fullstack. IIT Roorkee.
+              AI &amp; Web3 systems - ZK, DeFi and AI infra | IIT Roorkee.
             </p>
             <p className="hero__badge" role="status">
               <span className="hero__badge-dot" aria-hidden />
@@ -310,6 +310,47 @@ export default function Home() {
             Experience
           </h2>
           <ul className="timeline" role="list">
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img">
+                <img src="/images/cloutly.png" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <a
+                    className="timeline__name"
+                    href="https://cloutly.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Cloutly
+                  </a>
+                  <span className="timeline__date">May 2026 — Present</span>
+                </div>
+                <p className="timeline__role">Founding Engineer</p>
+                <p className="timeline__role">
+                  A personal AI Second Brain for content creation, an intelligent clone that knows your entire content
+                  universe, learns from the best creators in your niche, dynamically prepares your media kit and connects
+                  to the best upcoming brand campaigns.
+                </p>
+              </div>
+            </li>
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img">
+                <img src="/images/iivar.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <span className="timeline__name">IIM Ahmedabad Ventures</span>
+                  <span className="timeline__date">May 2026 — June 2026</span>
+                </div>
+                <p className="timeline__role">Summer Resident Apprenticeship</p>
+                <p className="timeline__role">
+                  Elite high-intensity startup builder residency at IIM Ahmedabad focused on designing and deploying
+                  production-ready AI MVPs. Involves intensive sprints in product architecture and rapid market
+                  validation.
+                </p>
+              </div>
+            </li>
             <li className="timeline__row">
               <div className="timeline__logo timeline__logo--img">
                 <img src="/images/welaunch.png" alt="" width={40} height={40} loading="lazy" decoding="async" />
