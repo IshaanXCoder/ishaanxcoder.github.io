@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "snap-context": {
+      "source": "sohilpandya/skills",
+      "sourceType": "github",
+      "skillPath": "skills/snap-context/SKILL.md",
+      "computedHash": "5426eabafa7b2c8ee8f9a36b7183f0c1e1e35a6483585eb84293c12c094929f4"
+    }
+  }
+}

@@ -3,6 +3,10 @@ name: Rebuild contributions page
 on:
   schedule:
     - cron: "0 0 * * *"
+  pull_request:
+    types: [opened, closed, reopened]
+  issues:
+    types: [opened]
   workflow_dispatch:
 
 permissions:

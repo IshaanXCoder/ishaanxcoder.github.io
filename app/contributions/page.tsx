@@ -102,8 +102,9 @@ export default async function ContributionsPage() {
     avatarUrl?: string;
     ownerLogin: string;
     extra?: React.ReactNode;
+    key: string | number;
   }) => (
-    <li className="contrib-card">
+    <li key={item.key} className="contrib-card">
       <div className="contrib-card__org">
         {item.avatarUrl ? (
           <img className="contrib-card__avatar" src={item.avatarUrl} alt="" width={24} height={24} loading="lazy" />
@@ -171,6 +172,7 @@ export default async function ContributionsPage() {
                 <span className="contrib-stat__label">Orgs</span>
               </div>
             </div>
+
           </div>
         </header>
 
@@ -223,6 +225,7 @@ export default async function ContributionsPage() {
                   <ul className="contrib-list" role="list">
                     {mergedList.map((pr: PullRequest) =>
                       itemCard({
+                        key: `${pr.repository.owner.login}/${pr.repository.name}-${pr.id}`,
                         title: pr.title,
                         url: pr.url,
                         repoUrl: `https://github.com/${pr.repository.owner.login}/${pr.repository.name}`,
@@ -253,6 +256,7 @@ export default async function ContributionsPage() {
                   <ul className="contrib-list" role="list">
                     {openPRList.map((pr: PullRequest) =>
                       itemCard({
+                        key: `${pr.repository.owner.login}/${pr.repository.name}-${pr.id}`,
                         title: pr.title,
                         url: pr.url,
                         repoUrl: `https://github.com/${pr.repository.owner.login}/${pr.repository.name}`,
@@ -284,6 +288,7 @@ export default async function ContributionsPage() {
                   <ul className="contrib-list" role="list">
                     {issueList.map((issue: Issue) =>
                       itemCard({
+                        key: `${issue.repository.owner.login}/${issue.repository.name}-${issue.id}`,
                         title: issue.title,
                         url: issue.url,
                         repoUrl: `https://github.com/${issue.repository.owner.login}/${issue.repository.name}`,
