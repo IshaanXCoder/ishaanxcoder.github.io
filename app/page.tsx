@@ -323,6 +323,30 @@ export default function Home() {
           <ul className="timeline" role="list">
             <li className="timeline__row">
               <div className="timeline__logo timeline__logo--img">
+                <img src="/images/paddox.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <a
+                    className="timeline__name"
+                    href="https://paddoxtechnologies.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Paddox Technologies
+                  </a>
+                  <span className="timeline__date">June 2026 — Present</span>
+                </div>
+                <p className="timeline__role">Founding Engineer</p>
+                <p className="timeline__role">
+                  Building an agent orchestration platform for industries. Deployed across the industries that keep
+                  things moving — from hospitality floors to trading desks to live codebases, putting AI where the work
+                  already lives.
+                </p>
+              </div>
+            </li>
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img">
                 <img src="/images/cloutly.png" alt="" width={40} height={40} loading="lazy" decoding="async" />
               </div>
               <div className="timeline__main">
