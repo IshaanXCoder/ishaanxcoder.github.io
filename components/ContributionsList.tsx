@@ -21,7 +21,7 @@ export default function ContributionsList({ items, totals }: {
     <section aria-label="Contribution activity">
       <div className="contrib-filters" role="group" aria-label="Filter contributions">
         {filters.map(([value, label]) => (
-          <button key={value} type="button" aria-pressed={filter === value} aria-controls="contribution-results"
+          <button key={value} type="button" data-kind={value} aria-pressed={filter === value} aria-controls="contribution-results"
             onClick={() => { setFilter(value); setLimit(10); }}>
             {label} <span>{totals[value] ?? "—"}</span>
           </button>
@@ -39,7 +39,7 @@ export default function ContributionsList({ items, totals }: {
         ) : (
           <ul className="contrib-list" role="list">
             {filtered.slice(0, limit).map((item) => (
-              <li className="contrib-card" key={item.id}>
+              <li className="contrib-card" key={item.id} data-kind={item.kind}>
                 <svg className="contrib-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
                   {item.kind === "issues" ? <><circle cx="12" cy="12" r="8" /><path d="M12 8v5m0 2v1" /></>
                     : <><circle cx="6" cy="5" r="2" /><circle cx="6" cy="19" r="2" /><circle cx="18" cy="19" r="2" /><path d="M6 7v10m12 0v-5c0-4-6-2-6-7m-2 2 2-2 2 2" /></>}

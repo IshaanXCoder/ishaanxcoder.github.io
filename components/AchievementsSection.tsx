@@ -63,9 +63,6 @@ export default function AchievementsSection() {
         <li>
           Cleared <strong>Pre-Regional Mathematics Olympiad (PRMO)</strong> in 2021.
         </li>
-        <li>
-          Served as <strong>Head Boy</strong> and twice as <strong>House Captain</strong> in school.
-        </li>
       </ul>
 
       <div className="achievements__gallery" aria-label="Achievement highlights">
