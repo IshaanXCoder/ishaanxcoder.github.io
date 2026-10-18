@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 
 type LightboxImage = {
   src: string;
@@ -22,17 +22,12 @@ const ORBITAL_IMAGE: LightboxImage = {
 
 export default function AchievementsSection() {
   const [activeImage, setActiveImage] = useState<LightboxImage | null>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
-  useEffect(() => {
-    if (!activeImage) return;
-
-    const onEsc = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setActiveImage(null);
-    };
-
-    window.addEventListener("keydown", onEsc);
-    return () => window.removeEventListener("keydown", onEsc);
-  }, [activeImage]);
+  function openImage(image: LightboxImage) {
+    setActiveImage(image);
+    dialogRef.current?.showModal();
+  }
 
   return (
     <section className="section" id="achievements" aria-labelledby="achievements-heading">
@@ -42,16 +37,19 @@ export default function AchievementsSection() {
       <ul className="achievements" role="list">
         <li>
           One of 100 students across all IITs, NITs and IIMs selected for the{" "}
-          <button className="achievements__link achievements__linkBtn" onClick={() => setActiveImage(OPJEMS_IMAGE)}>
+          <button className="achievements__link achievements__linkBtn" onClick={() => openImage(OPJEMS_IMAGE)}>
             <strong>OPJEMS Scholarship</strong>
           </button>
           .
         </li>
         <li>
-          <button className="achievements__link achievements__linkBtn" onClick={() => setActiveImage(ORBITAL_IMAGE)}>
+          <button className="achievements__link achievements__linkBtn" onClick={() => openImage(ORBITAL_IMAGE)}>
             <strong>1st place</strong> at Arbitrum Hacker House, Bangalore
           </button>
           , and <strong>2nd place</strong> at Arbitrum Open House (implemented Orbital).
+        </li>
+        <li>
+          <strong>Turbin3 Solana Builder graduate</strong>, Q3 2025.
         </li>
         <li>
           <strong>3rd place</strong> in Syntax Error&apos;24 (IITR), <strong>1st place</strong> in Shaastra&apos;21
@@ -71,31 +69,30 @@ export default function AchievementsSection() {
       </ul>
 
       <div className="achievements__gallery" aria-label="Achievement highlights">
-        <button className="achievements__card achievements__cardBtn" onClick={() => setActiveImage(OPJEMS_IMAGE)}>
+        <button className="achievements__card achievements__cardBtn" onClick={() => openImage(OPJEMS_IMAGE)}>
           <img src={OPJEMS_IMAGE.src} alt={OPJEMS_IMAGE.alt} loading="lazy" decoding="async" />
           <span>{OPJEMS_IMAGE.title}</span>
         </button>
-        <button className="achievements__card achievements__cardBtn" onClick={() => setActiveImage(ORBITAL_IMAGE)}>
+        <button className="achievements__card achievements__cardBtn" onClick={() => openImage(ORBITAL_IMAGE)}>
           <img src={ORBITAL_IMAGE.src} alt={ORBITAL_IMAGE.alt} loading="lazy" decoding="async" />
           <span>{ORBITAL_IMAGE.title}</span>
         </button>
       </div>
 
-      <div
-        className={`achievements__lightbox ${activeImage ? "is-open" : ""}`}
-        role="dialog"
-        aria-modal="true"
+      <dialog
+        ref={dialogRef}
+        className="achievements__lightbox"
         aria-label="Achievement image preview"
-        onClick={() => setActiveImage(null)}
+        onClick={(event) => { if (event.target === event.currentTarget) dialogRef.current?.close(); }}
       >
-        <div className="achievements__lightboxContent" onClick={(event) => event.stopPropagation()}>
-          <button className="achievements__lightboxClose" onClick={() => setActiveImage(null)} aria-label="Close image">
+        <div className="achievements__lightboxContent">
+          <button className="achievements__lightboxClose" onClick={() => dialogRef.current?.close()} aria-label="Close image" autoFocus>
             Close
           </button>
           {activeImage ? <img src={activeImage.src} alt={activeImage.alt} /> : null}
           {activeImage ? <p>{activeImage.title}</p> : null}
         </div>
-      </div>
+      </dialog>
     </section>
   );
 }

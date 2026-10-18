@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Ishaan Kesarwani",
   description:
-    "Ishaan Kesarwani — Web3, ZK, and systems developer. IIT Roorkee.",
+    "Ishaan Kesarwani — building AI agents, infrastructure, and cryptographic systems. IIT Roorkee.",
 };
 
 export default function RootLayout({

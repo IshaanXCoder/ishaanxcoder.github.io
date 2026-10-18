@@ -16,22 +16,21 @@ export default function Home() {
 
         <header className="hero">
           <div className="hero__text">
-            <h1 className="hero__title">Hi, I&apos;m Ishaan</h1>
+            <h1 className="hero__title">Ishaan Kesarwani</h1>
             <p className="hero__subtitle">
-              AI &amp; Web3 systems - ZK, DeFi and AI infra | IIT Roorkee.
+              Building AI agents, infrastructure, and cryptographic systems. Studying at IIT Roorkee.
             </p>
             <p className="hero__badge" role="status">
               <span className="hero__badge-dot" aria-hidden />
               Open to internships &amp; collaborations
             </p>
-            <Link
-              className="btn btn--ghost"
-              href="/contributions"
-              style={{ marginTop: "0.5rem" }}
-            >
-              <GitHubIcon className="btn__icon" />
-              View Contributions
-            </Link>
+            <div className="hero__actions">
+              <a className="btn btn--primary" href="/resume_ishaan_kesarwani.pdf" target="_blank" rel="noopener noreferrer">View résumé</a>
+              <Link className="btn" href="/contributions/">
+                <GitHubIcon className="btn__icon" />
+                Open source
+              </Link>
+            </div>
           </div>
           <div className="hero__avatar">
             <img
@@ -50,11 +49,11 @@ export default function Home() {
             About
           </h2>
           <p className="section__body">
-            I build around blockchain, zk proofs and AI.
+            I work on AI agents, zero-knowledge proofs, and blockchain systems.
             I&apos;m a developer at{" "}
             <a href="https://x.com/blocsoc-iitr" target="_blank" rel="noopener noreferrer">
               BlocSoc IITR
-            </a>
+            </a>{" "}
             and actively contribute to open source projects like{" "}
             <a href="https://github.com/intelowlproject/IntelOwl" target="_blank" rel="noopener noreferrer">
               IntelOwl
@@ -70,8 +69,8 @@ export default function Home() {
             and{" "}
             <a href="https://github.com/kyverno/kyverno" target="_blank" rel="noopener noreferrer">
               Kyverno
-            </a>{" "}
-            and care about building solid products.
+            </a>
+            .
           </p>
         </section>
 
@@ -102,38 +101,123 @@ export default function Home() {
           </ul>
         </section>
 
-        <section className="section" id="skills" aria-labelledby="skills-heading">
-          <h2 id="skills-heading" className="section__title">
-            Skills
+        <section className="section" id="experience" aria-labelledby="exp-heading">
+          <h2 id="exp-heading" className="section__title">
+            Experience
           </h2>
-          <ul className="skills" role="list">
-              {[
-                "Rust",
-                "Solidity/EVM fundamentals",
-                "Solana VM",
-                "ZK(SNARKs, STARKs, VMs)",
-                "DeFi",
-                "System design",
-                "Scaling Agents",
-                "RAG pipelines",
-                "AI Infra and Vectors DBs",
-                "Devops",
-                "Python",
-                "Golang",
-                "C++",
-              ].map((s) => (
-              <li key={s}>{s}</li>
-            ))}
+          <ul className="timeline" role="list">
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img timeline__logo--paddox">
+                <img src="/images/paddox.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <a
+                    className="timeline__name"
+                    href="https://paddoxtechnologies.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Paddox Technologies
+                  </a>
+                  <span className="timeline__date">June 2026 — Present</span>
+                </div>
+                <p className="timeline__role">Founding Engineer</p>
+                <ul className="timeline__details">
+                  <li>Developing a platform that lets companies hire, train, and manage multiple AI employees.</li>
+                  <li>Building core agent infrastructure for persistent identity and memory, adding multiple app integrations and autonomous work across company tools.</li>
+                </ul>
+              </div>
+            </li>
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img">
+                <img src="/images/cloutly.jpg" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <a
+                    className="timeline__name"
+                    href="https://cloutly.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Cloutly
+                  </a>
+                  <span className="timeline__date">May 2026 — July 2026</span>
+                </div>
+                <p className="timeline__role">Founding Engineer</p>
+                <p className="timeline__role">
+                  A personal AI Second Brain for content creation, an intelligent clone that knows your entire content
+                  universe, learns from the best creators in your niche, dynamically prepares your media kit and connects
+                  to the best upcoming brand campaigns.
+                </p>
+              </div>
+            </li>
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img">
+                <img src="/images/iivar.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <span className="timeline__name">IIM Ahmedabad Ventures</span>
+                  <span className="timeline__date">May 2026 — June 2026</span>
+                </div>
+                <p className="timeline__role">Summer Resident Apprenticeship</p>
+                <p className="timeline__role">
+                  Built and deployed AI MVPs during a startup residency at IIM Ahmedabad, with sprints in product
+                  architecture and market validation.
+                </p>
+              </div>
+            </li>
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img">
+                <img src="/images/welaunch.png" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <a className="timeline__name" href="https://welaunch.ai" target="_blank" rel="noopener noreferrer">
+                    WeLaunch.AI
+                  </a>
+                  <span className="timeline__date">February 2026 — March 2026</span>
+                </div>
+                <p className="timeline__role">AI Engineer, Intern</p>
+                <p className="timeline__role">
+                  Automated the sales team&apos;s workflow on Slack by designing and deploying a multi-agent system.
+                </p>
+              </div>
+            </li>
+            <li className="timeline__row">
+              <div className="timeline__logo timeline__logo--img">
+                <img src="/images/blocsoc.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
+              </div>
+              <div className="timeline__main">
+                <div className="timeline__top">
+                  <a
+                    className="timeline__name"
+                    href="https://x.com/blocsoc-iitr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    BlocSoc IITR
+                  </a>
+                  <span className="timeline__date">2024 — Present</span>
+                </div>
+                <p className="timeline__role">Developer</p>
+                <p className="timeline__role">
+                  Web3 and agentic developer, contributing to multiple projects and have won multiple international
+                  hackathons.
+                </p>
+              </div>
+            </li>
           </ul>
         </section>
 
         <section className="section" id="projects" aria-labelledby="projects-heading">
-          <p className="projects__eyebrow">My projects</p>
-          <h2 id="projects-heading" className="projects__title">
-            Check out my latest work
+          <h2 id="projects-heading" className="section__title">
+            Selected projects
           </h2>
           <p className="projects__lede">
-            A few things I&apos;ve shipped — from on-chain AMMs to ZK tooling and AI workflows.
+            Work across AI workflows, cryptography, and decentralized finance.
           </p>
           <div className="projects__grid">
             <article className="project-card">
@@ -292,7 +376,7 @@ export default function Home() {
               <div className="project-card__media">
                 <img src="/images/web-builder.png" alt="" width={800} height={500} loading="lazy" decoding="async" />
               </div>
-              <h3 className="project-card__title">WebBuidler</h3>
+              <h3 className="project-card__title">WebBuilder</h3>
               <p className="project-card__year">2024</p>
               <p className="project-card__desc">
                 AI tool that scaffolds a full site from a prompt, pushes to GitHub, and supports iterative edits.
@@ -316,171 +400,40 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" id="experience" aria-labelledby="exp-heading">
-          <h2 id="exp-heading" className="section__title">
-            Experience
+        <section className="section" id="skills" aria-labelledby="skills-heading">
+          <h2 id="skills-heading" className="section__title">
+            Skills
           </h2>
-          <ul className="timeline" role="list">
-            <li className="timeline__row">
-              <div className="timeline__logo timeline__logo--img">
-                <img src="/images/paddox.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
-              </div>
-              <div className="timeline__main">
-                <div className="timeline__top">
-                  <a
-                    className="timeline__name"
-                    href="https://paddoxtechnologies.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Paddox Technologies
-                  </a>
-                  <span className="timeline__date">June 2026 — Present</span>
-                </div>
-                <p className="timeline__role">Founding Engineer</p>
-                <p className="timeline__role">
-                  Building an agent orchestration platform for industries. Deployed across the industries that keep
-                  things moving — from hospitality floors to trading desks to live codebases, putting AI where the work
-                  already lives.
-                </p>
-              </div>
-            </li>
-            <li className="timeline__row">
-              <div className="timeline__logo timeline__logo--img">
-                <img src="/images/cloutly.png" alt="" width={40} height={40} loading="lazy" decoding="async" />
-              </div>
-              <div className="timeline__main">
-                <div className="timeline__top">
-                  <a
-                    className="timeline__name"
-                    href="https://cloutly.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Cloutly
-                  </a>
-                  <span className="timeline__date">May 2026 — Present</span>
-                </div>
-                <p className="timeline__role">Founding Engineer</p>
-                <p className="timeline__role">
-                  A personal AI Second Brain for content creation, an intelligent clone that knows your entire content
-                  universe, learns from the best creators in your niche, dynamically prepares your media kit and connects
-                  to the best upcoming brand campaigns.
-                </p>
-              </div>
-            </li>
-            <li className="timeline__row">
-              <div className="timeline__logo timeline__logo--img">
-                <img src="/images/iivar.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
-              </div>
-              <div className="timeline__main">
-                <div className="timeline__top">
-                  <span className="timeline__name">IIM Ahmedabad Ventures</span>
-                  <span className="timeline__date">May 2026 — June 2026</span>
-                </div>
-                <p className="timeline__role">Summer Resident Apprenticeship</p>
-                <p className="timeline__role">
-                  Elite high-intensity startup builder residency at IIM Ahmedabad focused on designing and deploying
-                  production-ready AI MVPs. Involves intensive sprints in product architecture and rapid market
-                  validation.
-                </p>
-              </div>
-            </li>
-            <li className="timeline__row">
-              <div className="timeline__logo timeline__logo--img">
-                <img src="/images/welaunch.png" alt="" width={40} height={40} loading="lazy" decoding="async" />
-              </div>
-              <div className="timeline__main">
-                <div className="timeline__top">
-                  <a className="timeline__name" href="https://welaunch.ai" target="_blank" rel="noopener noreferrer">
-                    WeLaunch.AI
-                  </a>
-                  <span className="timeline__date">2026</span>
-                </div>
-                <p className="timeline__role">AI Engineer, Intern</p>
-                <p className="timeline__role">
-                  Automated the sales team&apos;s workflow on Slack by designing and deploying a multi-agent system.
-                </p>
-              </div>
-            </li>
-            <li className="timeline__row">
-              <div className="timeline__logo timeline__logo--img">
-                <img src="/images/blocsoc.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
-              </div>
-              <div className="timeline__main">
-                <div className="timeline__top">
-                  <a
-                    className="timeline__name"
-                    href="https://x.com/blocsoc-iitr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    BlocSoc IITR
-                  </a>
-                  <span className="timeline__date">2024 — Present</span>
-                </div>
-                <p className="timeline__role">Developer</p>
-                <p className="timeline__role">
-                  Web3 and agentic developer, contributing to multiple projects and have won multiple international
-                  hackathons.
-                </p>
-              </div>
-            </li>
-            <li className="timeline__row">
-              <div className="timeline__logo timeline__logo--img">
-                <img src="/images/turbin3.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
-              </div>
-              <div className="timeline__main">
-                <div className="timeline__top">
-                  <a
-                    className="timeline__name"
-                    href="https://x.com/solana-turbin3"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Turbin3 · Solana Builder
-                  </a>
-                  <span className="timeline__date">2025 Q3</span>
-                </div>
-                <p className="timeline__role">Graduate</p>
-              </div>
-            </li>
-            <li className="timeline__row">
-              <div className="timeline__logo timeline__logo--img">
-                <img src="/images/cinesec.jpg" alt="" width={40} height={40} loading="lazy" decoding="async" />
-              </div>
-              <div className="timeline__main">
-                <div className="timeline__top">
-                  <a
-                    className="timeline__name"
-                    href="https://x.com/CinesecIITR"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Cinema Section, IITR
-                  </a>
-                  <span className="timeline__date">2024 — Present</span>
-                </div>
-                <p className="timeline__role">Member</p>
-              </div>
-            </li>
-            <li className="timeline__row">
-              <div className="timeline__logo timeline__logo--img">
-                <img src="/images/blockbuilders.jpeg" alt="" width={40} height={40} loading="lazy" decoding="async" />
-              </div>
-              <div className="timeline__main">
-                <div className="timeline__top">
-                  <span className="timeline__name">BlockBuidlers</span>
-                  <span className="timeline__date">Web3 startup</span>
-                </div>
-                <p className="timeline__role">Web Developer, Intern</p>
-              </div>
-            </li>
+          <ul className="skills" role="list">
+              {[
+                "Rust",
+                "AI infra and agents",
+                "Agentic memory",
+                "Inference",
+                "Language modelling",
+                "Solidity/EVM fundamentals",
+                "Solana VM",
+                "ZK (SNARKs, STARKs, VMs)",
+                "DeFi",
+                "System design",
+                "DevOps",
+                "Python",
+                "Golang",
+                "C++",
+              ].map((s) => (
+              <li key={s}>{s}</li>
+            ))}
           </ul>
         </section>
 
         <AchievementsSection />
 
+        <footer className="footer">
+          <p>Have something in mind? <a href="mailto:kesarwaniishaan4@gmail.com">Let&apos;s talk.</a></p>
+          <a href="https://github.com/IshaanXCoder" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/ishaan-kesarwani" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://x.com/0xIshaanK06" target="_blank" rel="noopener noreferrer">X</a>
+        </footer>
       </main>
 
       <Dock />

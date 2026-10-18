@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-html-link-for-pages -- Native links preserve section scrolling across the exported pages. */
 export default function Dock() {
   return (
     <nav className="dock" aria-label="Primary">
-      <a className="dock__link" href="#top" aria-label="Home">
+      <a className="dock__link" href="/#top" aria-label="Home">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           <polyline points="9 22 9 12 15 12 15 22" />
@@ -10,7 +11,14 @@ export default function Dock() {
           Home
         </span>
       </a>
-      <a className="dock__link" href="#projects" aria-label="Projects">
+      <a className="dock__link" href="/#experience" aria-label="Experience">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+          <rect x="3" y="7" width="18" height="14" rx="2" />
+          <path d="M8 7V3h8v4M3 12h18M10 12v3h4v-3" />
+        </svg>
+        <span className="dock__label" aria-hidden>Experience</span>
+      </a>
+      <a className="dock__link" href="/#projects" aria-label="Projects">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
           <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
         </svg>
@@ -18,7 +26,7 @@ export default function Dock() {
           Projects
         </span>
       </a>
-      <a className="dock__link" href="#achievements" aria-label="Achievements">
+      <a className="dock__link" href="/#achievements" aria-label="Achievements">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
           <path d="M8 21h8" />
           <path d="M12 17v4" />
