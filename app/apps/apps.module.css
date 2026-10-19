@@ -1,0 +1,57 @@
+.page { --peel-accent: #f4ad66; padding-bottom: 4rem; }
+.intro { max-width: 40rem; padding: 4rem 0 2.5rem; }
+.intro h1, .productHero h1 { margin: 0 0 1rem; font-size: clamp(2.25rem, 5vw, 3rem); font-weight: 650; letter-spacing: -.055em; line-height: 1.12; }
+.intro p { color: var(--muted); font-size: .9375rem; }
+.intro a, .story a { color: var(--text); }
+.intro .subtitle { margin: 0 0 2rem; color: var(--text); font-size: 1.0625rem; }
+.appCard { display: grid; grid-template-columns: 15rem 1fr; overflow: hidden; border: 1px solid var(--border); border-radius: .75rem; text-decoration: none; }
+.appCard:hover { border-color: var(--muted); }
+.appCard:hover .cardLink { text-decoration: underline; }
+.cardPreview { display: grid; place-items: center; padding: 1rem 2rem; background: var(--tag-bg); border-right: 1px solid var(--border); }
+.wheel { display: block; width: 100%; height: auto; overflow: visible; }
+.cardBody { align-self: center; padding: 1.75rem; }
+.cardHeading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem 1rem; }
+.cardHeading h3 { margin: 0; font-size: 1.5rem; font-weight: 600; letter-spacing: -.035em; }
+.availability { color: var(--muted); font-size: .75rem; }
+.cardBody p { margin: .75rem 0 1rem; max-width: 29rem; color: var(--muted); font-size: .875rem; }
+.cardLink { font-size: .8125rem; }
+.cardLink span { margin-left: .3rem; }
+.back { display: inline-block; margin-top: 2rem; padding-block: .5rem; color: var(--muted); font-size: .8125rem; text-decoration: none; }
+.back:hover { color: var(--text); }
+.productHero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: 2.5rem; padding: 2.5rem 0 3.5rem; }
+.tagline { margin: 0 0 1rem; font-size: 1.25rem; letter-spacing: -.025em; }
+.productDescription { margin: 0 0 1.5rem; max-width: 28rem; color: var(--muted); font-size: .9375rem; }
+.release { margin: .8rem 0 0; color: var(--muted); font-size: .75rem; line-height: 1.8; }
+.productPreview { margin: 0; }
+.productPreview figcaption { margin-top: .5rem; color: var(--muted); text-align: center; font-size: .6875rem; }
+.features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 2.5rem; margin: 0; }
+.features > div { padding-top: 1rem; border-top: 1px solid var(--border); }
+.features dt { margin-bottom: .5rem; font-size: .9375rem; font-weight: 550; }
+.features dd { margin: 0; color: var(--muted); font-size: .875rem; }
+.body { max-width: 45rem; color: var(--muted); font-size: .9375rem; }
+.shortcuts { display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; margin: 1.5rem 0; padding: 1.25rem 0; border-block: 1px solid var(--border); }
+.shortcuts dt { margin-bottom: .6rem; }
+.shortcuts dd { margin: 0; color: var(--muted); font-size: .8125rem; }
+.shortcuts kbd { padding: .3rem .55rem; border: 1px solid var(--border); border-radius: .35rem; background: var(--tag-bg); color: var(--text); font: inherit; font-size: .8125rem; }
+.steps { margin: 0 0 1.5rem; padding-left: 1.4rem; max-width: 45rem; color: var(--muted); font-size: .9375rem; }
+.steps li { padding-left: .25rem; margin-bottom: 1rem; }
+.steps strong, .installNote strong { color: var(--text); font-weight: 550; }
+.installNote { padding: .15rem 0 .15rem 1rem; border-left: 2px solid var(--border); color: var(--muted); font-size: .8125rem; }
+.installNote p { margin: .75rem 0; }
+.installNote code { overflow-wrap: anywhere; font-size: .95em; }
+.story { max-width: 44rem; color: var(--muted); font-size: .9375rem; }
+.story p { margin: 0 0 1rem; }
+.limits { padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .8125rem; }
+.limits h2 { margin: 0 0 1rem; color: var(--text); font-size: .9375rem; font-weight: 550; }
+.limits p { max-width: 46rem; }
+@media (max-width: 640px) {
+  .intro { padding-top: 2.5rem; }
+  .appCard { grid-template-columns: 1fr; }
+  .cardPreview { padding: 1rem; border-right: 0; border-bottom: 1px solid var(--border); }
+  .cardPreview .wheel { max-width: 13rem; }
+  .cardBody { padding: 1.25rem; }
+  .productHero { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 1.5rem; }
+  .productPreview { width: min(100%, 17rem); justify-self: center; }
+  .features { grid-template-columns: 1fr; gap: 1.25rem; }
+  .shortcuts { gap: 1.5rem; }
+}
