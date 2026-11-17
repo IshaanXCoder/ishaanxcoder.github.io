@@ -9,6 +9,8 @@
 .appCard:hover .cardLink { text-decoration: underline; }
 .cardPreview { display: grid; place-items: center; padding: 1rem 2rem; background: var(--tag-bg); border-right: 1px solid var(--border); }
 .wheel { display: block; width: 100%; height: auto; overflow: visible; }
+.appIcon { display: block; width: 100%; max-width: 11rem; height: auto; margin-inline: auto; }
+.appCard + .appCard { margin-top: 1rem; }
 .cardBody { align-self: center; padding: 1.75rem; }
 .cardHeading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .4rem 1rem; }
 .cardHeading h3 { margin: 0; font-size: 1.5rem; font-weight: 600; letter-spacing: -.035em; }

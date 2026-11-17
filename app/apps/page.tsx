@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import TopBar from "@/components/TopBar";
 import PeelWheel from "./PeelWheel";
@@ -25,7 +26,7 @@ export default function AppsPage() {
           </p>
           <p>
             This is where those experiments live: things I wanted on my own computer,
-            made useful enough to share. Just one for now. More when curiosity wins again.
+            made useful enough to share. Two so far. More when curiosity wins again.
           </p>
         </header>
 
@@ -40,6 +41,17 @@ export default function AppsPage() {
               </div>
               <p>Convert files, tidy up images, and pull text out of screenshots. All locally, with a drag wheel a shortcut away.</p>
               <span className={styles.cardLink}>Meet Peel <span aria-hidden>↗</span></span>
+            </div>
+          </Link>
+          <Link className={styles.appCard} href="/apps/tuck/">
+            <div className={styles.cardPreview}><Image className={styles.appIcon} src="/images/tuck-icon.png" width={512} height={512} alt="" /></div>
+            <div className={styles.cardBody}>
+              <div className={styles.cardHeading}>
+                <h3>Tuck</h3>
+                <span className={styles.availability}>Free for Mac</span>
+              </div>
+              <p>Hide the menu bar icons you don’t need. Tick them once, click the arrow, done. Plus a quick look at every open app and the memory it’s using.</p>
+              <span className={styles.cardLink}>Meet Tuck <span aria-hidden>↗</span></span>
             </div>
           </Link>
         </section>
